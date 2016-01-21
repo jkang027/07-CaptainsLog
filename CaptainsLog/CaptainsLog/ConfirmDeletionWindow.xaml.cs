@@ -39,8 +39,14 @@ namespace CaptainsLog
                     entry = MainWindow.logEntries[i];
                     MainWindow.logEntries.Remove(entry);
                 }
+                else
+                {
+                    if (i == MainWindow.logEntries.Count - 1)
+                    {
+                        MessageBox.Show("That entry does not exist");
+                    }
+                }
             }
-
             ConfirmDeletion.Close();
         }
 

@@ -26,11 +26,13 @@ namespace CaptainsLog
 
         public static int idNumberParse;
 
+        //Cancel button
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             DeleteEntry.Close();
         }
 
+        //Delete button
         private void button_Click(object sender, RoutedEventArgs e)
         {
             string deleteIdNumber = textBox.Text;
@@ -40,8 +42,8 @@ namespace CaptainsLog
                 ConfirmDeletionWindow confirm = new ConfirmDeletionWindow();
                 confirm.Show();
                 DeleteEntry.Close();
-
             }
+
             catch (Exception exception)
             {
                 MessageBox.Show("That is an invalid number. Input the log ID number (Ex. \"123\").");
